@@ -15,6 +15,7 @@
 .body {
   font-family: "Cairo";
   overflow-x: hidden;
+
 }
 
 html {
@@ -100,6 +101,7 @@ a {
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  transition: var(--transition);
 }
 @media (max-width: 767px) {
   .header .main-nav > li > a {
@@ -115,16 +117,16 @@ a {
   height: 4px;
   background-color: var(--main-color);
   top: 0;
-  left: -100%;
-  transition: var(--main-transition);
+  left:-100%;
+  transition: 0.9s;
 }
-.header .main-nav > li > a:hover {
+.header .main-nav > li > a:hover{
   color: var(--main-color);
   background-color: #ddd;
-  transform: translateY(-30px);
+
 }
 .header .main-nav > li > a:hover::before {
-  left: 0;
+left: 0;
 }
 
 .landing {
@@ -287,7 +289,8 @@ transition-timing-function: linear; */
   background-color: var(--main-color);
   top: 0;
   left: -100%;
-  transition: var(--main-transition);
+  transition: 0.6s;
+  animation: infint;
 }
 .header .main-nav > li > a:hover {
   color: var(--main-color);
@@ -1568,7 +1571,7 @@ transition-timing-function: linear; */
   font-weight: bold;
   margin: 0 0 20px;
 }
-}
+
 
 .footer .box .social{
   display: flex;
